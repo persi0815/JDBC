@@ -15,9 +15,9 @@ import java.sql.Statement;
 6. 추가 로직 실행 후, JDBC 연결 과정에서 필요했던 객체들을 close
  */
 public class dbtest {
-    private static final String url = "jdbc:mysql://localhost:3306/mydb?serverTimeZone=UTC";
-    private static final String user = "root";
-    private static final String password = System.getenv("DB_PASSWORD");
+    public static final String url = "jdbc:mysql://localhost:3306/mydb?serverTimeZone=UTC";
+    public static final String user = "root";
+    public static final String password = System.getenv("DB_PASSWORD");
 
     public static void main(String[] args) {
         try (Connection conn = getConnection()){ // Connection 객체 생성
